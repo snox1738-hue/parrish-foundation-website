@@ -86,7 +86,7 @@ body {
 
 .topnav { display: flex; align-items: center; gap: clamp(0.9rem, 2.5vw, 1.8rem); }
 .topnav a {
-  color: rgba(247, 241, 229, 0.82);
+  color: #fff;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
