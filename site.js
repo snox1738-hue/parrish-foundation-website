@@ -17,10 +17,17 @@
     dayEl.textContent = days;
   }
 
-  // make sure the hero video plays even under strict autoplay policies
+  // hero video: play the animation ONCE on load, then hold the last frame
+  // (the "THE PARRISH FOUNDATION" wordmark). Never loop or restart.
   const vid = document.querySelector(".hero-video");
   if (vid) {
-    const nudge = () => vid.play().catch(() => {});
+    let ended = false;
+    vid.addEventListener("ended", () => {
+      ended = true;
+      vid.pause(); // freeze on the final frame
+    });
+    // nudge play only until it has run once (covers strict autoplay policies)
+    const nudge = () => { if (!ended) vid.play().catch(() => {}); };
     nudge();
     ["click", "touchstart", "scroll", "keydown"].forEach((ev) =>
       addEventListener(ev, nudge, { once: true, passive: true })
