@@ -1,6 +1,13 @@
 [build]
   publish = "."
 
+# the netlify.app subdomain permanently redirects to the real domain
+[[redirects]]
+  from = "https://theparrishfoundation.netlify.app/*"
+  to = "https://theparrishfoundation.org/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
