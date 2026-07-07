@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Parrish Foundation — Build to Give</title>
+<meta name="description" content="Building real businesses from zero with one end goal: give it all back. We fundraise for SOS Children's Villages USA and track every dollar in public, forever.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="wordmark" href="#top">
+    <span class="wordmark-small">The Parrish Foundation</span>
+    <span class="wordmark-big">BUILD&nbsp;TO&nbsp;GIVE</span>
+  </a>
+  <nav class="topnav">
+    <a href="#story">The Story</a>
+    <a href="#how">How It Works</a>
+    <a href="#ledger">The Ledger</a>
+    <a class="btn-give" data-give href="#">Give&nbsp;→</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <p class="hero-kicker reveal">EST. 2026 · PHOENIX, ARIZONA · DAY <span id="day-count">1</span> OF THE CLIMB</p>
+    <h1 class="hero-line reveal d1">Dealt incredible cards.</h1>
+    <h1 class="hero-line accent reveal d2"><em>Giving them back.</em></h1>
+    <p class="hero-sub reveal d3">
+      We build real businesses from zero — for one end goal: <strong>give it all back</strong>
+      and build the biggest charity in the world. This page is where every dollar gets counted.
+      In public. Forever.
+    </p>
+    <div class="hero-ctas reveal d4">
+      <a class="btn-primary" data-give href="#">Give to the mission →</a>
+      <a class="btn-ghost" href="#story">Read the story</a>
+    </div>
+    <div class="hero-rule reveal d5" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+  </section>
+
+  <!-- ============ THE STORY ============ -->
+  <section class="story" id="story">
+    <div class="story-label"><span class="folio">№ 01</span> THE STORY</div>
+    <div class="story-body">
+      <p class="story-lede">Most people work hard to get more. <em>We work hard because we were given more.</em></p>
+      <p>
+        I was dealt incredible cards — a good family, good health, people who believed in me.
+        I didn't earn that. So I treat it like a debt.
+      </p>
+      <p>
+        The plan is simple and it is not modest: build real businesses from nothing, document the
+        whole climb, and give it all back — starting now, small and honest, and scaling as far as the
+        businesses can carry it. Not someday. Every month, in public, with receipts.
+      </p>
+      <p>
+        The foundation is named after <strong>J.R. Parrish</strong> — the mentor who taught me what
+        the cards were for.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how" id="how">
+    <div class="story-label"><span class="folio">№ 02</span> HOW IT WORKS</div>
+    <div class="how-grid">
+      <article class="how-card reveal">
+        <span class="how-num">1</span>
+        <h3>We build.</h3>
+        <p>Real companies, built from zero, documented daily — wins, losses, and actual numbers. The businesses are the engine.</p>
+      </article>
+      <article class="how-card reveal d1">
+        <span class="how-num">2</span>
+        <h3>You give — directly.</h3>
+        <p>The give button routes you to our official fundraiser page for <strong>SOS Children's Villages USA</strong>. Your money goes straight to them. It never touches our hands, ever.</p>
+      </article>
+      <article class="how-card reveal d2">
+        <span class="how-num">3</span>
+        <h3>Every dollar, counted.</h3>
+        <p>Every dollar this mission generates is logged in the public ledger below — forever. The receipts are the whole point.</p>
+      </article>
+    </div>
+    <p class="how-honest">
+      Honest fine print, up front: The Parrish Foundation is a giving <em>mission</em>, not yet an
+      incorporated nonprofit. We don't collect donations ourselves — <strong>we fundraise for</strong>
+      SOS Children's Villages USA, a registered 501(c)(3). Donations go directly to them, and your
+      tax receipt comes from them.
+    </p>
+  </section>
+
+  <!-- ============ THE LEDGER ============ -->
+  <section class="ledger" id="ledger">
+    <div class="ledger-inner">
+      <div class="story-label light"><span class="folio">№ 03</span> THE PUBLIC LEDGER</div>
+      <p class="ledger-kicker">TOTAL GENERATED FOR CHILDREN, TO DATE</p>
+      <p class="ledger-total" id="ledger-total">$0</p>
+      <p class="ledger-vow">
+        This number starts at zero because we just started — and we'd rather show you a real zero
+        than a fake anything. Watch it grow.
+      </p>
+      <div class="ledger-table-wrap">
+        <table class="ledger-table" id="ledger-table" aria-label="Public ledger of every dollar generated">
+          <thead>
+            <tr><th>DATE</th><th>WHAT HAPPENED</th><th class="num">AMOUNT</th><th class="num">RUNNING TOTAL</th></tr>
+          </thead>
+          <tbody><!-- rendered from ledger.js — real entries only --></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE CHARITY ============ -->
+  <section class="charity" id="charity">
+    <div class="story-label"><span class="folio">№ 04</span> WHO WE FUNDRAISE FOR</div>
+    <div class="charity-body">
+      <h2 class="charity-name">SOS Children's Villages <span>USA</span></h2>
+      <p class="charity-why">
+        We picked one cause and we're sticking to it: <strong>kids who were dealt bad cards</strong> —
+        orphaned and abandoned children who need what every kid deserves: a loving home.
+        SOS Children's Villages is the world's largest organization doing exactly that.
+      </p>
+      <ul class="charity-facts">
+        <li><span class="fact-check">✓</span> Registered 501(c)(3) — EIN 13-6188433</li>
+        <li><span class="fact-check">✓</span> 4/4 stars on Charity Navigator</li>
+        <li><span class="fact-check">✓</span> BBB Wise Giving Alliance accredited</li>
+        <li><span class="fact-check">✓</span> Your donation and receipt go directly to SOS — never through us</li>
+      </ul>
+      <a class="btn-primary big" data-give href="#">Give a kid better cards →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-mark">BUILD&nbsp;TO&nbsp;GIVE</div>
+  <p class="foot-line">The Parrish Foundation — named after J.R. Parrish, the mentor who taught us what the cards were for.</p>
+  <nav class="foot-nav">
+    <a href="privacy.html">Privacy</a>
+    <span>·</span>
+    <a href="terms.html">Terms</a>
+    <span>·</span>
+    <a href="#ledger">The Ledger</a>
+  </nav>
+  <p class="foot-legal">
+    The Parrish Foundation ("Build to Give") is a personal giving mission and is not an incorporated
+    nonprofit or 501(c)(3). All donations are made directly to SOS Children's Villages USA via their
+    official fundraising platform and are governed by their terms and privacy policy.
+  </p>
+</footer>
+
+<script src="ledger.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

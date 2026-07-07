@@ -1,0 +1,46 @@
+/* ============================================================
+   THE PUBLIC LEDGER — real entries only. NO fake data, ever.
+   Every dollar this mission generates gets a row here, forever.
+
+   To add an entry, append to LEDGER_ENTRIES:
+   { date: "2026-07-20", what: "First fundraiser donation", amount: 25 }
+   ============================================================ */
+
+// ⚠️ TODO: replace with Sam's personal fundraiser page URL once created
+// on fundraise.sos-usa.org (Classy). Must be the FUNDRAISER PAGE — never
+// the generic sos-usa.org donation form (that would be untrackable).
+const GIVE_URL = "https://fundraise.sos-usa.org";
+
+const LEDGER_ENTRIES = [
+  // empty by design — we just started. Real entries only.
+];
+
+(function renderLedger() {
+  const tbody = document.querySelector("#ledger-table tbody");
+  const totalEl = document.getElementById("ledger-total");
+  if (!tbody || !totalEl) return;
+
+  const fmt = (n) =>
+    n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+
+  if (LEDGER_ENTRIES.length === 0) {
+    tbody.innerHTML =
+      '<tr class="empty"><td colspan="4">Nothing yet — we just started. The first dollar we generate goes right here, and it never comes down.</td></tr>';
+    totalEl.textContent = "$0";
+    return;
+  }
+
+  let running = 0;
+  tbody.innerHTML = LEDGER_ENTRIES
+    .map((e) => {
+      running += e.amount;
+      return `<tr>
+        <td>${e.date}</td>
+        <td>${e.what}</td>
+        <td class="num">${fmt(e.amount)}</td>
+        <td class="num">${fmt(running)}</td>
+      </tr>`;
+    })
+    .join("");
+  totalEl.textContent = fmt(running);
+})();
