@@ -86,13 +86,13 @@ body {
 
 .topnav { display: flex; align-items: center; gap: clamp(0.9rem, 2.5vw, 1.8rem); }
 .topnav a {
-  color: var(--ink-soft);
+  color: rgba(247, 241, 229, 0.82);
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.topnav a:hover { color: var(--green); }
+.topnav a:hover { color: #7fc9a4; }
 
 .btn-give {
   background: var(--green);
