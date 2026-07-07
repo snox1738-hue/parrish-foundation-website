@@ -124,6 +124,19 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  /* subtle "heartbeat" — a slow breathing pulse so the held frame feels alive */
+  animation: heartbeat 7s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50%      { transform: scale(1.018); filter: brightness(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { animation: none; }
 }
 
 /* legibility veil over the video */

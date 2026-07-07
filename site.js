@@ -17,17 +17,26 @@
     dayEl.textContent = days;
   }
 
-  // hero video: play the animation ONCE on load, then hold the last frame
-  // (the "THE PARRISH FOUNDATION" wordmark). Never loop or restart.
+  // hero video: play the full animation ONCE on load (the wordmark assembles +
+  // the light sweep), then gently LOOP just the calm tail — the "THE PARRISH
+  // FOUNDATION" wordmark holds while the gold particles keep drifting, so it
+  // stays alive instead of dead-freezing. A CSS "breathing" pulse (styles.css)
+  // adds the heartbeat.
   const vid = document.querySelector(".hero-video");
   if (vid) {
-    let ended = false;
-    vid.addEventListener("ended", () => {
-      ended = true;
-      vid.pause(); // freeze on the final frame
+    const LOOP_START = 8.6; // wordmark fully formed, past the glint — just particles
+    const seekToLoop = () => {
+      try { vid.currentTime = LOOP_START; } catch (e) {}
+      vid.play().catch(() => {});
+    };
+    // when the clip reaches the end, drop back into the calm tail (not the top)
+    vid.addEventListener("timeupdate", () => {
+      if (vid.duration && vid.currentTime >= vid.duration - 0.06) seekToLoop();
     });
-    // nudge play only until it has run once (covers strict autoplay policies)
-    const nudge = () => { if (!ended) vid.play().catch(() => {}); };
+    vid.addEventListener("ended", seekToLoop); // safety net if timeupdate misses it
+
+    // nudge play in case autoplay is blocked until first interaction
+    const nudge = () => vid.play().catch(() => {});
     nudge();
     ["click", "touchstart", "scroll", "keydown"].forEach((ev) =>
       addEventListener(ev, nudge, { once: true, passive: true })
