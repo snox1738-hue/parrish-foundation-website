@@ -13,6 +13,17 @@ Plain HTML/CSS/JS — no build step. Deployed on Netlify from this repo (`main` 
    Never point it at the generic sos-usa.org donation form — untrackable.
 2. **The ledger** — `LEDGER_ENTRIES` in `ledger.js`. Real entries only. NO fake data, ever.
 
+## Hero video (two-layer, seamless)
+- `assets/parrish-animation.mp4` — the intro. Plays ONCE on load, then holds its
+  final frame underneath.
+- `assets/parrish-loop.mp4` — a **boomerang** idle loop (the settled tail,
+  forward + reversed) that fades in when the intro ends and loops forever. The
+  forward+reverse construction means it has NO seam — it can't glitch. Rebuild it
+  from a new clean intro with: extract the calm tail (`-ss 8.4 -t 1.55`), make a
+  `-vf reverse` copy, and concat forward+reverse.
+- Handoff + autoplay-nudge logic lives in `site.js`; crossfade + layering in
+  `styles.css` (`.hero-loop.live`).
+
 ## Files
 - `index.html` — the whole story (hero → story → how it works → public ledger → SOS)
 - `styles.css` — the open-ledger aesthetic (paper/ink/green, Instrument Serif + Spline Sans Mono)
