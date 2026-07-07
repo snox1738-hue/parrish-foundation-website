@@ -59,24 +59,24 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.1rem clamp(1.2rem, 4vw, 3rem);
-  border-bottom: 1.5px solid var(--ink);
+  border-bottom: 1px solid rgba(247, 241, 229, 0.14);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  backdrop-filter: blur(8px);
+  background: rgba(12, 16, 14, 0.82);
+  backdrop-filter: blur(10px);
   z-index: 50;
 }
 
-.wordmark { text-decoration: none; color: var(--ink); line-height: 1.05; }
+.wordmark { text-decoration: none; color: var(--paper); line-height: 1.05; }
 .wordmark-small {
   display: block;
   font-family: var(--mono);
   font-size: 0.62rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: rgba(247, 241, 229, 0.55);
 }
 .wordmark-big {
   font-family: var(--serif);
