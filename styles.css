@@ -141,20 +141,43 @@ body {
   .hero-loop { transition: none; }
 }
 
-/* legibility veil over the video (dark, so text reads over the charcoal clip) */
+/* subtle bottom vignette only — lets the full animation show, keeps DONATE readable */
 .hero-veil {
   position: absolute;
   inset: 0;
   z-index: 2;
+  pointer-events: none;
   background: linear-gradient(
-    100deg,
-    rgba(10, 14, 12, 0.82) 0%,
-    rgba(10, 14, 12, 0.55) 44%,
-    rgba(10, 14, 12, 0.12) 100%
+    to bottom,
+    rgba(10, 14, 12, 0) 62%,
+    rgba(10, 14, 12, 0.55) 100%
   );
 }
 
-.hero-content { position: relative; z-index: 3; max-width: 1100px; }
+/* DONATE NOW — the single CTA, bottom-center */
+.hero-donate {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: clamp(2.2rem, 6vh, 4rem);
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.28em;
+  text-decoration: none;
+  color: var(--paper);
+  padding: 0.95rem 2.2rem;
+  border: 1.5px solid rgba(247, 241, 229, 0.55);
+  border-radius: 2px;
+  background: rgba(10, 14, 12, 0.25);
+  backdrop-filter: blur(2px);
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+.hero-donate:hover {
+  background: var(--green);
+  border-color: var(--green);
+  transform: translateX(-50%) translateY(-2px);
+}
 
 .hero-kicker {
   font-family: var(--mono);
