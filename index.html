@@ -14,7 +14,7 @@
 <body>
 
 <header class="topbar">
-  <a class="wordmark" href="#top">
+  <a class="wordmark" href="#home">
     <span class="wordmark-small">The Parrish Foundation</span>
     <span class="wordmark-big">BUILD&nbsp;TO&nbsp;GIVE</span>
   </a>
@@ -28,27 +28,30 @@
 
 <main id="top">
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <p class="hero-kicker reveal">EST. 2026 · PHOENIX, ARIZONA · DAY <span id="day-count">1</span> OF THE CLIMB</p>
-    <h1 class="hero-line reveal d1">Dealt incredible cards.</h1>
-    <h1 class="hero-line accent reveal d2"><em>Giving them back.</em></h1>
-    <p class="hero-sub reveal d3">
-      We build real businesses from zero — for one end goal: <strong>give it all back</strong>
-      and build the biggest charity in the world. This page is where every dollar gets counted.
-      In public. Forever.
-    </p>
-    <div class="hero-ctas reveal d4">
-      <a class="btn-primary" data-give href="#">Give to the mission →</a>
-      <a class="btn-ghost" href="#story">Read the story</a>
+  <!-- ============ PAGE 1 · HOME (full-screen video) ============ -->
+  <section class="hero page" id="home">
+    <video class="hero-video" autoplay muted loop playsinline
+           src="assets/parrish-animation.mp4" aria-hidden="true"></video>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-kicker reveal">EST. 2026 · PHOENIX, ARIZONA · DAY <span id="day-count">1</span> OF THE CLIMB</p>
+      <h1 class="hero-line reveal d1">Dealt incredible cards.</h1>
+      <h1 class="hero-line accent reveal d2"><em>Giving them back.</em></h1>
+      <p class="hero-sub reveal d3">
+        We build real businesses from zero — for one end goal: <strong>give it all back</strong>
+        and build the biggest charity in the world. This page is where every dollar gets counted.
+        In public. Forever.
+      </p>
+      <div class="hero-ctas reveal d4">
+        <a class="btn-primary" data-give href="#">Give to the mission →</a>
+        <a class="btn-ghost" href="#story">Read the story</a>
+      </div>
     </div>
-    <div class="hero-rule reveal d5" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
+    <a class="scroll-hint reveal d5" href="#story" aria-label="Scroll to the story">SCROLL<br>↓</a>
   </section>
 
-  <!-- ============ THE STORY ============ -->
-  <section class="story" id="story">
+  <!-- ============ PAGE 2 · THE STORY ============ -->
+  <section class="story page" id="story">
     <div class="story-label"><span class="folio">№ 01</span> THE STORY</div>
     <div class="story-body">
       <p class="story-lede">Most people work hard to get more. <em>We work hard because we were given more.</em></p>
@@ -68,8 +71,8 @@
     </div>
   </section>
 
-  <!-- ============ HOW IT WORKS ============ -->
-  <section class="how" id="how">
+  <!-- ============ PAGE 3 · HOW IT WORKS ============ -->
+  <section class="how page" id="how">
     <div class="story-label"><span class="folio">№ 02</span> HOW IT WORKS</div>
     <div class="how-grid">
       <article class="how-card reveal">
@@ -96,8 +99,8 @@
     </p>
   </section>
 
-  <!-- ============ THE LEDGER ============ -->
-  <section class="ledger" id="ledger">
+  <!-- ============ PAGE 4 · THE LEDGER ============ -->
+  <section class="ledger page" id="ledger">
     <div class="ledger-inner">
       <div class="story-label light"><span class="folio">№ 03</span> THE PUBLIC LEDGER</div>
       <p class="ledger-kicker">TOTAL GENERATED FOR CHILDREN, TO DATE</p>
@@ -117,8 +120,8 @@
     </div>
   </section>
 
-  <!-- ============ THE CHARITY ============ -->
-  <section class="charity" id="charity">
+  <!-- ============ PAGE 5 · THE CHARITY ============ -->
+  <section class="charity page" id="charity">
     <div class="story-label"><span class="folio">№ 04</span> WHO WE FUNDRAISE FOR</div>
     <div class="charity-body">
       <h2 class="charity-name">SOS Children's Villages <span>USA</span></h2>
@@ -139,7 +142,7 @@
 
 </main>
 
-<footer class="foot">
+<footer class="foot page">
   <div class="foot-mark">BUILD&nbsp;TO&nbsp;GIVE</div>
   <p class="foot-line">The Parrish Foundation — named after J.R. Parrish, the mentor who taught us what the cards were for.</p>
   <nav class="foot-nav">

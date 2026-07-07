@@ -17,6 +17,16 @@
     dayEl.textContent = days;
   }
 
+  // make sure the hero video plays even under strict autoplay policies
+  const vid = document.querySelector(".hero-video");
+  if (vid) {
+    const nudge = () => vid.play().catch(() => {});
+    nudge();
+    ["click", "touchstart", "scroll", "keydown"].forEach((ev) =>
+      addEventListener(ev, nudge, { once: true, passive: true })
+    );
+  }
+
   // scroll reveal
   const io = new IntersectionObserver(
     (entries) => {
