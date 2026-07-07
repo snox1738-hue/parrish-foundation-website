@@ -17,14 +17,22 @@
     dayEl.textContent = days;
   }
 
-  // hero video: play the animation ONCE on load, then hold the final frame
-  // (the "THE PARRISH FOUNDATION" wordmark). The CSS "breathing" pulse
-  // (styles.css) keeps it subtly alive without any looping/seam.
+  // hero: play the intro ONCE, then crossfade into a seamless boomerang idle
+  // loop (parrish-loop.mp4 = the settled tail forward+reversed, so it never
+  // has a seam). The wordmark gently breathes forever instead of dead-freezing.
   const vid = document.querySelector(".hero-video");
+  const loop = document.querySelector(".hero-loop");
   if (vid) {
     let ended = false;
-    vid.addEventListener("ended", () => { ended = true; vid.pause(); });
-    const nudge = () => { if (!ended) vid.play().catch(() => {}); };
+    vid.addEventListener("ended", () => {
+      ended = true;
+      vid.pause(); // hold the intro's final frame underneath
+      if (loop) { loop.play().catch(() => {}); loop.classList.add("live"); }
+    });
+    const nudge = () => {
+      if (!ended) vid.play().catch(() => {});
+      if (loop) loop.play().catch(() => {}); // keep the idle loop warm/decoding
+    };
     nudge();
     ["click", "touchstart", "scroll", "keydown"].forEach((ev) =>
       addEventListener(ev, nudge, { once: true, passive: true })
