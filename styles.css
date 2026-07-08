@@ -100,6 +100,9 @@ body {
 .topnav a:hover { color: #7fc9a4; }
 
 .btn-give {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
   background: transparent;
   color: #fff !important;
   border: 1.5px solid rgba(255, 255, 255, 0.7);
@@ -111,8 +114,8 @@ body {
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
 .btn-give:hover { background: #fff; color: #14110c !important; border-color: #fff; transform: translateY(-1px); }
-/* a touch thicker arrow */
-.give-arrow { -webkit-text-stroke: 0.7px currentColor; font-weight: 600; }
+/* a touch thicker arrow, vertically centered with the text */
+.give-arrow { -webkit-text-stroke: 0.7px currentColor; font-weight: 600; line-height: 1; display: inline-flex; align-items: center; }
 
 @media (max-width: 640px) {
   .topnav a:not(.btn-give) { display: none; }
