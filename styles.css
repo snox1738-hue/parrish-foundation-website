@@ -14,8 +14,8 @@
   --navy: #0f1b2e;       /* page background */
   --navy-2: #17263d;     /* raised panels / cards */
   --accent: #4d90ff;     /* vibrant blue, reads on navy */
-  --green: #1c6b47;
-  --green-deep: #114b31;
+  --green: #2f6fd6;      /* repurposed to blue — button/chip fills */
+  --green-deep: #1f4f9e; /* darker blue — button borders/shadows */
   --amber: #d98a3d;
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "Schibsted Grotesk", -apple-system, sans-serif;
