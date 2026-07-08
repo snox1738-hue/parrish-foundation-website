@@ -69,7 +69,7 @@ body {
   z-index: 50;
 }
 
-.wordmark { text-decoration: none; color: #fff; line-height: 1.05; text-align: center; }
+.wordmark { text-decoration: none; color: #fff; line-height: 1.05; }
 .wordmark-small {
   display: block;
   font-family: var(--mono);
@@ -95,9 +95,9 @@ body {
 .topnav a:hover { color: #7fc9a4; }
 
 .btn-give {
-  background: #000;
-  color: #fff !important;
-  border: 1.5px solid #fff;
+  background: #dcdcda;
+  color: #14110c !important;
+  border: 1.5px solid #dcdcda;
   font-family: var(--mono);
   padding: 0.45rem 0.95rem;
   border-radius: 2px;
@@ -105,7 +105,7 @@ body {
   letter-spacing: 0.05em;
   transition: background 0.2s, color 0.2s, transform 0.2s;
 }
-.btn-give:hover { background: #fff; color: #000 !important; transform: translateY(-1px); }
+.btn-give:hover { background: #fff; border-color: #fff; transform: translateY(-1px); }
 /* a touch thicker arrow */
 .give-arrow { -webkit-text-stroke: 0.7px currentColor; font-weight: 600; }
 
