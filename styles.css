@@ -100,9 +100,9 @@ body {
 .topnav a:hover { color: #7fc9a4; }
 
 .btn-give {
-  background: #f6f4ee;
-  color: #14110c !important;
-  border: 1.5px solid rgba(33, 27, 18, 0.32);
+  background: transparent;
+  color: #fff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
   font-family: var(--mono);
   padding: 0.45rem 0.95rem;
   border-radius: 2px;
@@ -110,7 +110,7 @@ body {
   letter-spacing: 0.05em;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
-.btn-give:hover { background: var(--ink); color: #f6f4ee !important; border-color: var(--ink); transform: translateY(-1px); }
+.btn-give:hover { background: #fff; color: #14110c !important; border-color: #fff; transform: translateY(-1px); }
 /* a touch thicker arrow */
 .give-arrow { -webkit-text-stroke: 0.7px currentColor; font-weight: 600; }
 
