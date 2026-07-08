@@ -575,7 +575,7 @@ body {
 }
 .contact-email:hover { text-decoration: underline; }
 
-.contact-btn { text-decoration: none; }
+.contact-btn { text-decoration: none; align-self: flex-start; }
 
 /* ---------- footer ---------- */
 .foot {
