@@ -81,15 +81,29 @@
     }
     syncIndex();
 
+    const DURATION = 820; // ms — gentle one-page glide (tune here for speed)
+    const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
     function goTo(i) {
       i = Math.max(0, Math.min(sections.length - 1, i));
       const targetY = sections[i].offsetTop;
       index = i;
       if (reduce) { window.scrollTo(0, targetY); return; }
-      animating = true;
-      window.scrollTo({ top: targetY, behavior: "smooth" });
+      const startY = window.scrollY;
+      const dist = targetY - startY;
       clearTimeout(unlock);
-      unlock = setTimeout(() => { animating = false; }, 780);
+      if (Math.abs(dist) < 1) { animating = false; return; }
+      animating = true;
+      let startTs = null;
+      function step(ts) {
+        if (startTs === null) startTs = ts;
+        const p = Math.min((ts - startTs) / DURATION, 1);
+        window.scrollTo(0, startY + dist * easeInOutCubic(p));
+        if (p < 1) requestAnimationFrame(step);
+        else animating = false;
+      }
+      requestAnimationFrame(step);
+      unlock = setTimeout(() => { animating = false; }, DURATION + 150); // safety
     }
 
     // if the current section is taller than the viewport, let it scroll
