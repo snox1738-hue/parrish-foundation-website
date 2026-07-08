@@ -34,10 +34,10 @@
     <video class="hero-loop" muted loop playsinline
            src="assets/parrish-loop.mp4" aria-hidden="true"></video>
     <div class="hero-veil" aria-hidden="true"></div>
-    <a class="hero-ledger" href="#ledger" aria-label="See the public ledger">
+    <div class="hero-ledger">
       <span class="hero-ledger-num" id="hero-ledger-total">$0</span>
       <span class="hero-ledger-label">raised for children · to date</span>
-    </a>
+    </div>
     <a class="hero-donate" data-give href="#">DONATE NOW</a>
   </section>
 
@@ -90,28 +90,7 @@
     </p>
   </section>
 
-  <!-- ============ PAGE 4 · THE LEDGER ============ -->
-  <section class="ledger page" id="ledger">
-    <div class="ledger-inner">
-      <div class="story-label light"><span class="folio">№ 03</span> THE PUBLIC LEDGER</div>
-      <p class="ledger-kicker">TOTAL GENERATED FOR CHILDREN, TO DATE</p>
-      <p class="ledger-total" id="ledger-total">$0</p>
-      <p class="ledger-vow">
-        This number starts at zero because we just started — and we'd rather show you a real zero
-        than a fake anything. Watch it grow.
-      </p>
-      <div class="ledger-table-wrap">
-        <table class="ledger-table" id="ledger-table" aria-label="Public ledger of every dollar generated">
-          <thead>
-            <tr><th>DATE</th><th>WHAT HAPPENED</th><th class="num">AMOUNT</th><th class="num">RUNNING TOTAL</th></tr>
-          </thead>
-          <tbody><!-- rendered from ledger.js — real entries only --></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAGE 5 · THE CHARITY ============ -->
+  <!-- ============ PAGE 4 · THE CHARITY ============ -->
   <section class="charity page" id="charity">
     <div class="story-label"><span class="folio">№ 04</span> WHO WE FUNDRAISE FOR</div>
     <div class="charity-body">
