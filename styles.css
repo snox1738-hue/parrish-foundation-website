@@ -331,7 +331,7 @@ body {
 
 /* ---------- story ---------- */
 .story {
-  padding: clamp(4rem, 10vh, 6rem) clamp(1.2rem, 6vw, 5rem) clamp(2rem, 5vh, 3rem);
+  padding: clamp(6rem, 8vh, 7rem) clamp(1.2rem, 6vw, 5rem) clamp(2rem, 5vh, 3rem);
   max-width: 1100px;
 }
 
@@ -354,7 +354,7 @@ body {
 
 /* ---------- how ---------- */
 .how {
-  padding: clamp(4rem, 10vh, 6rem) clamp(1.2rem, 6vw, 5rem) clamp(2rem, 5vh, 3rem);
+  padding: clamp(6rem, 8vh, 7rem) clamp(1.2rem, 6vw, 5rem) clamp(2rem, 5vh, 3rem);
   max-width: 1250px;
 }
 
@@ -486,7 +486,7 @@ body {
 
 /* ---------- charity ---------- */
 .charity {
-  padding: clamp(4rem, 10vh, 6rem) clamp(1.2rem, 6vw, 5rem) clamp(2rem, 5vh, 3rem);
+  padding: clamp(6rem, 8vh, 7rem) clamp(1.2rem, 6vw, 5rem) clamp(2rem, 5vh, 3rem);
   max-width: 1100px;
 }
 
@@ -523,6 +523,7 @@ body {
   padding: 3rem clamp(1.2rem, 6vw, 5rem) 3.5rem;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 .foot-mark {
