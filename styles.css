@@ -238,7 +238,7 @@ body {
   letter-spacing: -0.01em;
   color: var(--paper);
 }
-.hero-line.accent em { color: #7fc9a4; }
+.hero-line.accent em { color: var(--accent); }
 
 .hero-sub {
   max-width: 34rem;
@@ -327,7 +327,7 @@ body {
 }
 .story-label .folio { color: var(--accent); font-weight: 600; }
 .story-label.light { border-top-color: var(--rule); color: var(--paper-deep); }
-.story-label.light .folio { color: #7fc9a4; }
+.story-label.light .folio { color: var(--accent); }
 
 /* ---------- story ---------- */
 .story {
@@ -431,7 +431,7 @@ body {
   font-family: var(--mono);
   font-size: 0.72rem;
   letter-spacing: 0.24em;
-  color: #7fc9a4;
+  color: var(--accent);
 }
 
 .ledger-total {
@@ -465,7 +465,7 @@ body {
   font-weight: 500;
   font-size: 0.68rem;
   letter-spacing: 0.18em;
-  color: #7fc9a4;
+  color: var(--accent);
   padding: 0.7rem 0.9rem;
   border-bottom: 1px solid rgba(247, 241, 229, 0.25);
 }
