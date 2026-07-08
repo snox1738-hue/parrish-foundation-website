@@ -18,10 +18,15 @@ const LEDGER_ENTRIES = [
 (function renderLedger() {
   const tbody = document.querySelector("#ledger-table tbody");
   const totalEl = document.getElementById("ledger-total");
-  if (!tbody || !totalEl) return;
+  const heroTotalEl = document.getElementById("hero-ledger-total");
 
   const fmt = (n) =>
     n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+
+  const total = LEDGER_ENTRIES.reduce((sum, e) => sum + e.amount, 0);
+  if (heroTotalEl) heroTotalEl.textContent = fmt(total); // top-of-home total
+
+  if (!tbody || !totalEl) return; // hero exists without the full ledger table
 
   if (LEDGER_ENTRIES.length === 0) {
     tbody.innerHTML =
