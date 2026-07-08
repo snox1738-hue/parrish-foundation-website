@@ -26,16 +26,15 @@
 
 html {
   scroll-behavior: smooth;
-  /* one flick of the wheel = the next page */
-  scroll-snap-type: y mandatory;
+  /* gentle snap — scroll freely, eases into each page instead of locking */
+  scroll-snap-type: y proximity;
 }
 
-/* every .page is a full screen that the scroll snaps to */
+/* every .page is a full screen that the scroll gently snaps to */
 .page {
   min-height: 100vh;
   min-height: 100svh;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
