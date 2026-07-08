@@ -5,15 +5,18 @@
    ============================================================ */
 
 :root {
-  --paper: #f7f1e5;
+  --paper: #f7f1e5;      /* light — used for text ON the dark video hero */
   --paper-deep: #efe6d3;
-  --ink: #211b12;
-  --ink-soft: #4f463a;
-  --ink-faint: #8a7f6d;
-  --rule: #d8cbb2;
+  --ink: #eef1f6;        /* primary text on the dark-blue pages */
+  --ink-soft: rgba(238, 241, 246, 0.74);
+  --ink-faint: rgba(238, 241, 246, 0.5);
+  --rule: rgba(238, 241, 246, 0.16);
+  --navy: #0f1b2e;       /* page background */
+  --navy-2: #17263d;     /* raised panels / cards */
+  --accent: #7fc9a4;     /* light green, reads on navy */
   --green: #1c6b47;
   --green-deep: #114b31;
-  --amber: #b05f10;
+  --amber: #d98a3d;
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "Schibsted Grotesk", -apple-system, sans-serif;
   --mono: "Spline Sans Mono", "Courier New", monospace;
