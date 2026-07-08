@@ -178,9 +178,7 @@ body {
   gap: 0.5rem;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.25s;
 }
-.hero-ledger:hover { transform: translateX(-50%) translateY(-2px); }
 
 .hero-ledger-num {
   font-family: var(--mono);
