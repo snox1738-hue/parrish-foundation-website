@@ -25,8 +25,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
-  scroll-behavior: smooth;
-  /* paging is driven by site.js — one gesture glides one full page */
+  /* paging + easing are driven by site.js — one gesture glides one full page */
+  scroll-behavior: auto;
   scroll-snap-type: none;
 }
 
