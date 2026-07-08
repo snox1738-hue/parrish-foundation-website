@@ -43,15 +43,12 @@ html {
 }
 
 body {
-  background: var(--paper);
+  background: var(--navy);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  /* faint paper grain */
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::selection { background: var(--green); color: var(--paper); }
@@ -67,12 +64,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  /* same dark as the animation, feathering to transparent — no hard line */
+  /* navy feathering to transparent — blends into both the video and the pages */
   background: linear-gradient(
     to bottom,
-    rgba(11, 15, 13, 0.92) 0%,
-    rgba(11, 15, 13, 0.8) 45%,
-    rgba(11, 15, 13, 0) 100%
+    rgba(15, 27, 46, 0.95) 0%,
+    rgba(15, 27, 46, 0.82) 45%,
+    rgba(15, 27, 46, 0) 100%
   );
   z-index: 50;
 }
@@ -323,14 +320,12 @@ body {
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   color: var(--ink-faint);
-  border-top: 1.5px solid var(--ink);
-  padding-top: 0.8rem;
   margin-bottom: 2.5rem;
   display: flex;
   gap: 1.2rem;
   align-items: baseline;
 }
-.story-label .folio { color: var(--green); font-weight: 600; }
+.story-label .folio { color: var(--accent); font-weight: 600; }
 .story-label.light { border-top-color: var(--rule); color: var(--paper-deep); }
 .story-label.light .folio { color: #7fc9a4; }
 
