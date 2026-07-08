@@ -343,7 +343,7 @@ body {
   line-height: 1.2;
   margin-bottom: 1.6rem;
 }
-.story-lede em { color: var(--green); }
+.story-lede em { color: var(--accent); }
 
 .story-body p:not(.story-lede) {
   color: var(--ink-soft);
@@ -361,18 +361,17 @@ body {
 .how-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0;
-  border: 1.5px solid var(--ink);
-  background: var(--ink);
-  gap: 1.5px;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+  gap: 1px;
 }
 
 .how-card {
-  background: var(--paper);
+  background: var(--navy-2);
   padding: 2rem 1.6rem 2.2rem;
   position: relative;
 }
-.how-card:hover { background: var(--paper-deep); }
+.how-card:hover { background: #1d3050; }
 
 .how-num {
   font-family: var(--mono);
@@ -402,7 +401,7 @@ body {
   margin-top: 1.8rem;
   padding: 1.1rem 1.3rem;
   border-left: 3px solid var(--amber);
-  background: var(--paper-deep);
+  background: rgba(255, 255, 255, 0.045);
   color: var(--ink-soft);
   font-size: 0.9rem;
   max-width: 52rem;
@@ -500,7 +499,7 @@ body {
   line-height: 1.05;
   margin-bottom: 1.2rem;
 }
-.charity-name span { color: var(--green); font-style: italic; }
+.charity-name span { color: var(--accent); font-style: italic; }
 
 .charity-why { color: var(--ink-soft); font-size: 1.08rem; margin-bottom: 1.6rem; }
 .charity-why strong { color: var(--ink); }
@@ -516,11 +515,11 @@ body {
   border-bottom: 1px dashed var(--rule);
   color: var(--ink-soft);
 }
-.fact-check { color: var(--green); font-weight: 600; margin-right: 0.6rem; }
+.fact-check { color: var(--accent); font-weight: 600; margin-right: 0.6rem; }
 
 /* ---------- footer ---------- */
 .foot {
-  border-top: 1.5px solid var(--ink);
+  border: none;
   padding: 3rem clamp(1.2rem, 6vw, 5rem) 3.5rem;
   text-align: center;
   align-items: center;
