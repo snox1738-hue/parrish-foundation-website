@@ -557,8 +557,8 @@ body {
 .legal-page h2 { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; margin: 2rem 0 0.6rem; }
 .legal-page p, .legal-page li { color: var(--ink-soft); font-size: 0.97rem; margin-bottom: 0.8rem; }
 .legal-page ul { padding-left: 1.3rem; }
-.legal-page a { color: var(--green); }
-.back-home { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; text-decoration: none; color: var(--green); display: inline-block; margin-bottom: 2.5rem; }
+.legal-page a { color: var(--accent); }
+.back-home { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; text-decoration: none; color: var(--accent); display: inline-block; margin-bottom: 2.5rem; }
 
 /* ---------- reveal animations ---------- */
 .reveal {
