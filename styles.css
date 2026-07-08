@@ -38,7 +38,7 @@ html {
   scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
 }
 
