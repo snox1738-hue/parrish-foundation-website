@@ -13,7 +13,7 @@
   --rule: rgba(238, 241, 246, 0.16);
   --navy: #0f1b2e;       /* page background */
   --navy-2: #17263d;     /* raised panels / cards */
-  --accent: #7fc9a4;     /* light green, reads on navy */
+  --accent: #4d90ff;     /* vibrant blue, reads on navy */
   --green: #1c6b47;
   --green-deep: #114b31;
   --amber: #d98a3d;
@@ -97,7 +97,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.topnav a:hover { color: #7fc9a4; }
+.topnav a:hover { color: var(--accent); }
 
 .btn-give {
   display: inline-flex;
