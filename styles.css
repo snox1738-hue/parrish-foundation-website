@@ -69,14 +69,14 @@ body {
   z-index: 50;
 }
 
-.wordmark { text-decoration: none; color: #fff; line-height: 1.05; }
+.wordmark { text-decoration: none; color: var(--ink); line-height: 1.05; }
 .wordmark-small {
   display: block;
   font-family: var(--mono);
   font-size: 0.62rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(33, 27, 18, 0.55);
 }
 .wordmark-big {
   font-family: var(--serif);
@@ -86,26 +86,26 @@ body {
 
 .topnav { display: flex; align-items: center; gap: clamp(0.9rem, 2.5vw, 1.8rem); }
 .topnav a {
-  color: #fff;
+  color: var(--ink-soft);
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.topnav a:hover { color: #7fc9a4; }
+.topnav a:hover { color: var(--green); }
 
 .btn-give {
-  background: #dcdcda;
+  background: #f6f4ee;
   color: #14110c !important;
-  border: 1.5px solid #dcdcda;
+  border: 1.5px solid rgba(33, 27, 18, 0.32);
   font-family: var(--mono);
   padding: 0.45rem 0.95rem;
   border-radius: 2px;
   font-size: 0.8rem !important;
   letter-spacing: 0.05em;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
-.btn-give:hover { background: #fff; border-color: #fff; transform: translateY(-1px); }
+.btn-give:hover { background: var(--ink); color: #f6f4ee !important; border-color: var(--ink); transform: translateY(-1px); }
 /* a touch thicker arrow */
 .give-arrow { -webkit-text-stroke: 0.7px currentColor; font-weight: 600; }
 
