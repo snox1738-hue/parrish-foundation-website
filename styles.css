@@ -600,6 +600,49 @@ body {
 
 .foot-line { color: var(--ink-soft); font-size: 0.92rem; max-width: 34rem; margin: 0 auto 1.4rem; }
 
+/* executive board */
+.board { margin: 0.4rem auto 2rem; }
+.board-label {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+}
+.board-founder {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-bottom: 1.3rem;
+}
+.board-founder strong { font-weight: 400; color: var(--accent); }
+.board-list {
+  list-style: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  text-align: left;
+}
+.board-list li {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  padding-left: 1.1rem;
+  position: relative;
+}
+.board-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 .foot-nav { font-size: 0.85rem; display: flex; justify-content: center; gap: 0.7rem; margin-bottom: 1.6rem; }
 .foot-nav a { color: var(--ink); }
 .foot-nav span { color: var(--ink-faint); }
