@@ -195,6 +195,36 @@ body {
   color: #fff;
 }
 
+/* progress toward the $1,000,000 goal */
+.hero-goal { width: min(86vw, 400px); margin-top: 1.3rem; }
+.hero-goal-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.hero-goal-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  min-width: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #9cc6ff);
+  box-shadow: 0 0 14px rgba(77, 144, 255, 0.7);
+  transition: width 1.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.hero-goal-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.hero-goal-pct { color: var(--accent); font-weight: 600; }
+.hero-goal-target { color: rgba(255, 255, 255, 0.6); }
+
 /* DONATE NOW — the single CTA, bottom-center */
 .hero-donate {
   position: absolute;

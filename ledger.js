@@ -26,6 +26,14 @@ const LEDGER_ENTRIES = [
   const total = LEDGER_ENTRIES.reduce((sum, e) => sum + e.amount, 0);
   if (heroTotalEl) heroTotalEl.textContent = fmt(total); // top-of-home total
 
+  // progress toward the $1,000,000 goal
+  const GOAL = 1000000;
+  const fillEl = document.getElementById("hero-goal-fill");
+  const pctEl = document.getElementById("hero-goal-pct");
+  const pctVal = Math.min(100, (total / GOAL) * 100);
+  if (fillEl) fillEl.style.width = pctVal + "%";
+  if (pctEl) pctEl.textContent = (pctVal > 0 && pctVal < 1 ? pctVal.toFixed(2) : Math.round(pctVal)) + "%";
+
   if (!tbody || !totalEl) return; // hero exists without the full ledger table
 
   if (LEDGER_ENTRIES.length === 0) {
