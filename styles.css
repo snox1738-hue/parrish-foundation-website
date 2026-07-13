@@ -363,7 +363,7 @@ body {
   max-width: 1100px;
 }
 
-.story-body { max-width: 40rem; margin-left: auto; }
+.story-body { max-width: 40rem; }
 
 .story-lede {
   font-family: var(--serif);
