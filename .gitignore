@@ -1,2 +1,6 @@
 # Local Netlify folder
 .netlify
+
+# daemon/tracker logs must not dirty the repo (caused a commit-every-30s loop)
+scripts/*.log
+.DS_Store

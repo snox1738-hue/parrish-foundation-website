@@ -24,5 +24,9 @@ fi
 LOCAL="$(git rev-parse @ 2>/dev/null)"
 REMOTE="$(git rev-parse @{u} 2>/dev/null || echo none)"
 if [ "$LOCAL" != "$REMOTE" ]; then
+  # the remote can gain commits we don't have (e.g. GitHub writes CNAME
+  # commits when Pages domain settings change) — integrate them first or
+  # every push silently bounces forever
+  git pull --rebase -q origin main || true
   git push -q origin main || true
 fi
