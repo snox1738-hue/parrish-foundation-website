@@ -790,3 +790,26 @@ section:not(.hero) .reveal.in-view { animation-play-state: running; }
   .reveal { animation: none; opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- mobile (phones) — same design, fitted to a narrow screen ---------- */
+@media (max-width: 640px) {
+  /* hero video: portrait screens cover-crop the 16:9 title card down to an
+     unreadable center slice — show the full frame as a centered cinematic
+     strip instead */
+  .hero-video,
+  .hero-loop {
+    inset: auto;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+  }
+
+  /* keep the CTA on one line */
+  .hero-donate {
+    white-space: nowrap;
+    letter-spacing: 0.22em;
+    padding: 0.9rem 1.7rem;
+  }
+}
