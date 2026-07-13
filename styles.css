@@ -812,7 +812,10 @@ section:not(.hero) .reveal.in-view { animation-play-state: running; }
     top: auto;
     transform: none;
     margin-top: 1.6rem;
+    order: 1;
   }
+  .hero-films { order: 2; }
+  .hero-donate { order: 3; }
 
   /* the full 16:9 frame, faded into the navy at its edges — no hard seam,
      no cover-cropping the title to an unreadable slice */
