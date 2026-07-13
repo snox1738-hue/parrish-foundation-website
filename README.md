@@ -1,6 +1,6 @@
-# The Parrish Foundation — Build to Give
+# The Parrish Foundation — Built to Give
 
-Static website for the Build to Give mission (theparrishfoundation.org).
+Static website for the Built to Give mission (theparrishfoundation.org).
 We fundraise for **SOS Children's Villages USA** and track every dollar in public.
 
 ## Stack
