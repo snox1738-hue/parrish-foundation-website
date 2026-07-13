@@ -794,16 +794,23 @@ section:not(.hero) .reveal.in-view { animation-play-state: running; }
 /* ---------- mobile (phones) — same design, fitted to a narrow screen ---------- */
 @media (max-width: 640px) {
   /* hero video: portrait screens cover-crop the 16:9 title card down to an
-     unreadable center slice — show the full frame as a centered cinematic
-     strip instead */
+     unreadable center slice — instead pin the full frame to the top (like
+     desktop) and fade its edges into the navy so there's no hard seam */
   .hero-video,
   .hero-loop {
     inset: auto;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    transform: none;
     width: 100%;
     height: auto;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 72%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 72%, transparent 100%);
+  }
+
+  /* counter sits below the video strip instead of on top of the title */
+  .hero-ledger {
+    top: calc(56.25vw + 3.5rem); /* 16:9 video height + breathing room */
   }
 
   /* keep the CTA on one line */
