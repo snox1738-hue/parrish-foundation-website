@@ -1,0 +1,6 @@
+{
+  "raised": 0,
+  "updatedAt": null,
+  "source": "sos-fundraiser",
+  "note": "Auto-updated by scripts/update-total.mjs once the fundraiser URL is set in scripts/tracker-config.json. $0 is the real current total — never hand-edit this to a fake number."
+}
