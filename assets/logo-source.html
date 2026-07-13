@@ -1,0 +1,30 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Spline+Sans+Mono:wght@400;500&display=swap');
+* { margin:0; padding:0; }
+body { width:1024px; height:1024px; background:transparent; display:flex; align-items:center; justify-content:center; }
+.disc {
+  width:1000px; height:1000px; border-radius:50%;
+  background: radial-gradient(circle at 50% 38%, #17263d 0%, #0f1b2e 62%, #0a1322 100%);
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.ring-outer { position:absolute; inset:22px; border:2px solid rgba(247,241,229,.5); border-radius:50%; }
+.ring-inner { position:absolute; inset:38px; border:1px solid rgba(217,138,61,.55); border-radius:50%; }
+.stack { text-align:center; position:relative; }
+.line1 { font-family:'Instrument Serif', Georgia, serif; font-size:118px; line-height:1.04; color:#f7f1e5; }
+.orn { display:flex; align-items:center; justify-content:center; gap:22px; margin:34px auto 30px; }
+.orn .bar { width:150px; height:1.5px; background:rgba(247,241,229,.4); }
+.orn .diamond { width:11px; height:11px; background:#d98a3d; transform:rotate(45deg); }
+.sub { font-family:'Spline Sans Mono', monospace; font-size:27px; letter-spacing:.5em; text-indent:.5em; color:rgba(247,241,229,.78); }
+.est { font-family:'Spline Sans Mono', monospace; font-size:20px; letter-spacing:.34em; text-indent:.34em; color:rgba(217,138,61,.85); margin-top:26px; }
+</style>
+<div class="disc">
+  <div class="ring-outer"></div>
+  <div class="ring-inner"></div>
+  <div class="stack">
+    <div class="line1">The Parrish<br>Foundation</div>
+    <div class="orn"><div class="bar"></div><div class="diamond"></div><div class="bar"></div></div>
+    <div class="sub">BUILD TO GIVE</div>
+    <div class="est">EST. 2026</div>
+  </div>
+</div>
