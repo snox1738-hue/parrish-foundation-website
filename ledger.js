@@ -57,3 +57,26 @@ const LEDGER_ENTRIES = [
     .join("");
   totalEl.textContent = fmt(running);
 })();
+
+/* Live total from the SOS fundraiser — donation-total.json is kept current
+   by scripts/update-total.mjs (real scraped number, never hand-set).
+   If the fetch fails or the tracker isn't wired yet, the manual ledger
+   total above simply stands. */
+(function liveTotal() {
+  fetch("donation-total.json?t=" + Date.now())
+    .then((r) => (r.ok ? r.json() : null))
+    .then((data) => {
+      if (!data || typeof data.raised !== "number" || data.raised <= 0) return;
+      const fmt = (n) =>
+        n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+      const heroTotalEl = document.getElementById("hero-ledger-total");
+      if (heroTotalEl) heroTotalEl.textContent = fmt(data.raised);
+      const GOAL = 1000000;
+      const fillEl = document.getElementById("hero-goal-fill");
+      const pctEl = document.getElementById("hero-goal-pct");
+      const pctVal = Math.min(100, (data.raised / GOAL) * 100);
+      if (fillEl) fillEl.style.width = pctVal + "%";
+      if (pctEl) pctEl.textContent = (pctVal > 0 && pctVal < 1 ? pctVal.toFixed(2) : Math.round(pctVal)) + "%";
+    })
+    .catch(() => {});
+})();
