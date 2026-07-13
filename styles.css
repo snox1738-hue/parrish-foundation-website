@@ -145,7 +145,7 @@ body {
     -webkit-overflow-scrolling: touch;
   }
   .topnav::-webkit-scrollbar { display: none; }
-  .topnav a { font-size: 0.68rem; }
+  .topnav a { font-size: 0.63rem; }
   .topnav .btn-give {
     position: absolute;
     top: 1.1rem;
