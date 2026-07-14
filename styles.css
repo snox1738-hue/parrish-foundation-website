@@ -651,6 +651,8 @@ body {
 }
 
 .charity-body { max-width: 44rem; }
+/* contact lives in the same section as the charity info now */
+.charity .contact-body { margin-top: 5rem; }
 
 .charity-name {
   font-family: var(--serif);
