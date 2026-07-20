@@ -39,11 +39,22 @@ try {
    Grab dollar amounts that appear just before the word "donated". */
 const m = html.match(/\$\s?([\d,]+(?:\.\d{1,2})?)\s*(?:<[^>]*>\s*)*donated/i)
        || html.match(/donated[^$]{0,80}\$\s?([\d,]+(?:\.\d{1,2})?)/i);
-if (!m) {
-  console.error("could not find raised amount on page — layout may have changed");
-  process.exit(1);
+let raised;
+if (m) {
+  raised = Math.round(parseFloat(m[1].replace(/,/g, "")));
+} else {
+  /* Fallback: with $0 raised the page shows only "N% of $GOAL"
+     (lblViewCampaignProgressAmountPercentData / lblViewCampaignTargetAmount).
+     Percent granularity is coarse — only trusted as a floor, and the
+     never-decrease guard below keeps a real total from being clobbered. */
+  const pct = html.match(/ProgressAmountPercentData[^>]*>\s*([\d.]+)\s*</i);
+  const goal = html.match(/TargetAmount[^>]*>\s*([\d,]+(?:\.\d{1,2})?)\s*</i);
+  if (!pct || !goal) {
+    console.error("could not find raised amount on page — layout may have changed");
+    process.exit(1);
+  }
+  raised = Math.round((parseFloat(pct[1]) / 100) * parseFloat(goal[1].replace(/,/g, "")));
 }
-const raised = Math.round(parseFloat(m[1].replace(/,/g, "")));
 
 const prev = JSON.parse(readFileSync(OUT, "utf8"));
 if (prev.raised === raised) process.exit(0); // no change, no commit churn
