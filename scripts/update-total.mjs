@@ -20,14 +20,19 @@ const OUT = join(ROOT, "donation-total.json");
 const { fundraiserUrl } = JSON.parse(readFileSync(CONFIG, "utf8"));
 if (!fundraiserUrl) process.exit(0); // not wired up yet — silently do nothing
 
-const res = await fetch(fundraiserUrl, {
-  headers: { "User-Agent": "Mozilla/5.0 (ParrishFoundationTracker)" },
-});
-if (!res.ok) {
-  console.error(`fetch failed: ${res.status}`);
+/* SOS's server sends an incomplete TLS chain that Node's fetch rejects;
+   curl (system trust store + AIA) handles it, so fetch via curl. */
+let html;
+try {
+  html = execFileSync(
+    "curl",
+    ["-sfL", "-A", "Mozilla/5.0 (ParrishFoundationTracker)", fundraiserUrl],
+    { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 }
+  );
+} catch (e) {
+  console.error(`fetch failed: ${e.status ?? e.message}`);
   process.exit(1);
 }
-const html = await res.text();
 
 /* The campaign page shows the raised total as a dollar amount next to
    "donated" (same widget as the my-campaign overview: "$X donated").
