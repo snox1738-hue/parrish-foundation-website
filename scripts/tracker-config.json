@@ -1,4 +1,4 @@
 {
-  "fundraiserUrl": "",
+  "fundraiserUrl": "https://fundraise.sos-usa.org/campaign/the-parrish-foundation",
   "_instructions": "Set fundraiserUrl to Sam's public SOS fundraiser page URL once SOS publishes it (check contact@theparrishfoundation.org for the approval email). The tracker does nothing while this is empty."
 }
