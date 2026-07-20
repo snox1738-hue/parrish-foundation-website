@@ -6,10 +6,9 @@
    { date: "2026-07-20", what: "First fundraiser donation", amount: 25 }
    ============================================================ */
 
-// ⚠️ TODO: replace with Sam's personal fundraiser page URL once created
-// on fundraise.sos-usa.org (Classy). Must be the FUNDRAISER PAGE — never
-// the generic sos-usa.org donation form (that would be untrackable).
-const GIVE_URL = "https://fundraise.sos-usa.org";
+// Sam's approved SOS fundraiser page (approved 2026-07-20). Must stay the
+// FUNDRAISER PAGE — never the generic sos-usa.org donation form (untrackable).
+const GIVE_URL = "https://fundraise.sos-usa.org/campaign/the-parrish-foundation";
 
 const LEDGER_ENTRIES = [
   // empty by design — we just started. Real entries only.
